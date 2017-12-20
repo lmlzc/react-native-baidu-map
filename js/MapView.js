@@ -7,9 +7,12 @@ import {
 } from 'react-native';
 
 import React, {
-  Component
+  Component,
+
 } from 'react';
-import PropTypes from 'prop-types';
+
+import PropTypes from 'prop-types'
+
 import MapTypes from './MapTypes';
 
 export default class MapView extends Component {
@@ -31,7 +34,12 @@ export default class MapView extends Component {
     onMapClick: PropTypes.func,
     onMapDoubleClick: PropTypes.func,
     onMarkerClick: PropTypes.func,
-    onMapPoiClick: PropTypes.func
+    onMapPoiClick: PropTypes.func,
+    routeType: PropTypes.number,
+
+
+     overlayPoints: PropTypes.array,
+      startLocation:PropTypes.bool
   };
 
   static defaultProps = {
@@ -43,7 +51,8 @@ export default class MapView extends Component {
     marker: null,
     markers: [],
     center: null,
-    zoom: 10
+    zoom: 10,
+    routeType:10,
   };
 
   constructor() {
